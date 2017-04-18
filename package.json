@@ -28,6 +28,7 @@
     "juicer": "^0.6.6-stable",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
+    "memory-fs": "^0.4.1",
     "mime-types": "2.1.11",
     "moment": "^2.15.1",
     "nedb": "^1.8.0",

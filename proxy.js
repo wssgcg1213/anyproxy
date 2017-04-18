@@ -213,8 +213,6 @@ class ProxyCore extends events.EventEmitter {
    * @memberOf ProxyCore
    */
   close() {
-    // clear recorder cache
-
     this.httpProxyServer && this.httpProxyServer.close();
     this.httpProxyServer = null;
 
@@ -269,10 +267,6 @@ class ProxyServer extends ProxyCore {
 
   close() {
     super.close();
-    if (this.recorder) {
-      logUtil.printLog('clearing cache file...');
-      this.recorder.clear();
-    }
     const tmpWebServer = this.webServerInstance;
     this.recorder = null;
     this.webServerInstance = null;
